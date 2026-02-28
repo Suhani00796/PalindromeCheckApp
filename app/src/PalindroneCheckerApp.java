@@ -1,23 +1,20 @@
-public class UseCase2PalindromeCheckerApp {
+public class PalindroneCheckerApp {
     public static void main(String[] args) {
-        // Step 1: Define a hardcoded string literal
-        String str = "madam";
-        String reversedStr = "";
+        // UC3: String Reverse Logic
+        String original = "radar";
+        String reversed = "";
 
-        // Step 2: Logic to reverse the string
-        int strLength = str.length();
-
-        for (int i = (strLength - 1); i >= 0; --i) {
-            reversedStr = reversedStr + str.charAt(i);
+        // Use a for loop to reverse the string
+        for (int i = original.length() - 1; i >= 0; i--) {
+            // String Concatenation (+) demonstrates string immutability
+            reversed = reversed + original.charAt(i);
         }
 
-        // Step 3: Conditional statement (if-else) to check palindrome
-        if (str.toLowerCase().equals(reversedStr.toLowerCase())) {
-            System.out.println(str + " is a Palindrome.");
+        // Use equals() to compare content
+        if (original.equals(reversed)) {
+            System.out.println(original + " is a palindrome.");
         } else {
-            System.out.println(str + " is not a Palindrome.");
+            System.out.println(original + " is not a palindrome.");
         }
-
-        // Program exits
     }
 }
